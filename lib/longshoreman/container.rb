@@ -46,9 +46,7 @@ class Longshoreman::Container
     main_args = {
       'name' => name,
       'Hostname' => name,
-      'Image' => i,
-      'PublishAllPorts' => true,
-      'CapAdd' => 'NET_ADMIN',
+      'Image' => i
     }
     @raw = Docker::Container.create(main_args.merge(extra_args))
   end
@@ -76,7 +74,7 @@ class Longshoreman::Container
   end
 
   def start
-    @raw.start
+    @raw.start({ 'PublishAllPorts' => true, 'CapAdd' => 'NET_ADMIN' })
   end
 
   def stop
