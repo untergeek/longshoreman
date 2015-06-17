@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'longshoreman'
-  s.version       = '0.0.3'
+  s.version       = '0.0.4'
   s.date          = '2015-06-08'
   s.summary       = 'A helper Gem for using the Docker API'
   s.description   = 'This gem is intended to aid in using Docker images and containers, specifically with regards to integration testing in RSpec.'

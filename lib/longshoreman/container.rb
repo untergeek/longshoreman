@@ -83,6 +83,13 @@ class Longshoreman::Container
     @raw.stop
   end
 
-  attr_accessor :raw
+  def network_delay(ms)
+    @raw.exec(['tc', 'qdisc', 'add', 'dev', 'eth0', 'root', 'netem', 'delay', '#{ms}ms'])
+  end
 
+  def remove_network_delay
+    @raw.exec(['tc', 'qdisc', 'del', 'dev', 'eth0', 'root', 'netem'])
+  end
+
+  attr_accessor :raw
 end
