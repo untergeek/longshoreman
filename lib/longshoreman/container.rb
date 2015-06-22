@@ -48,7 +48,7 @@ class Longshoreman::Container
       'Hostname' => name,
       'Image' => i,
       'PublishAllPorts' => true,
-      'CapAdd' => 'NET_ADMIN',
+      'CapAdd' => ['NET_ADMIN'],
     }
     @raw = Docker::Container.create(main_args.merge(extra_args))
   end
