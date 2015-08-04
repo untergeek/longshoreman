@@ -34,6 +34,10 @@ class Longshoreman
     @image.cleanup
   end
 
+  def self.pull_image(image, tag)
+    `docker pull #{image}:#{tag}`
+  end
+
   attr_reader :ip
   attr_accessor :container
   attr_accessor :image
