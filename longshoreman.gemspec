@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name          = 'longshoreman'
-  s.version       = '0.0.6'
+  s.version       = '0.0.7'
   s.summary       = 'A helper Gem for using the Docker API'
   s.description   = 'This gem is intended to aid in using Docker images and containers, specifically with regards to integration testing in RSpec.'
-  s.authors       = ['Aaron Mildenstein']
+  s.authors       = ['Aaron Mildenstein', 'Tal Levy']
   s.email         = 'aaron@mildensteins.com'
   s.homepage      = 'http://github.com/untergeek/longshoreman'
   s.licenses      = ['Apache License (2.0)']
